@@ -359,7 +359,6 @@ button {
 
 
 
-
 /* About Me (Left Sidebar) */	
 
 .about-fixed {
@@ -1591,7 +1590,18 @@ hr {
 
 
 
+
+
 /* Useful Classes */
+
+
+.circle {
+    border-radius: 50%;
+  }
+  .center{
+    text-align: center;
+  }
+    
 
 
 /* Spacing ( with Margin and Padding ) */
@@ -2126,28 +2136,104 @@ hr {
 }
 
 
-.thumbnail
-{
- border: 7px solid #1abc9c;
- transition: all 0.1s ease-in-out;
- padding:0; 
+/* Tutorial Cards */
 
- 
-}
-
-.thumbnail:hover {
-    border: 2px outset #1abc9c;
-    box-shadow: 0px 10px 9px #696969;
-}
+.skill-card {
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+  }
+  .skill-card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  .skill-card:hover .skill-card__header {
+    height: 100px;
+  }
+  .skill-card:hover .skill-card__header .skill-card__icon {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(3);
+            transform: translateX(-50%) translateY(-50%) scale(3);
+  }
+  .skill-card:hover .skill-card__body {
+    height: 250px;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+    transition-duration: 0.5s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(1) {
+    transition-delay: 0.25s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(3) {
+    transition-delay: 0.75s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(4) {
+    transition-delay: 1s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(5) {
+    transition-delay: 1.25s;
+  }
+  .skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(6) {
+    transition-delay: 1.5s;
+  }
+  .skill-card .skill-card__header {
+    position: relative;
+    background-color: #eb6c3f;
+    height: 170px;
+    margin: -20px -20px 20px -20px;
+    transition: height 0.5s;
+    overflow: hidden;
+  }
+  .skill-card .skill-card__header .skill-card__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    display: block;
+    width: 128px;
+    height: 128px;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .skill-card .skill-card__body {
+    height: 40px;
+    transition: height 0.5s;
+    overflow: hidden;
+  }
+  .skill-card .skill-card__body .skill-card__title {
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .skill-card .skill-card__body .skill-card__duration {
+    color: #9E9E9E;
+    font-style: italic;
+  }
+  .skill-card .skill-card__body .skill-card__knowledge {
+    margin-top: 10px;
+    color: #424242;
+  }
+  .skill-card .skill-card__body .skill-card__knowledge li {
+    margin-top: 5px;
+    transition-duration: 0;
+    transition-delay: 0.5s;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  
 
 /*
-* ROADMAP CSS
+ ROADMAP CSS
 */
 
-#roadmap__container {
-  position: relative;
-  widows: auto;
-}
+
 
 #roadmap {
   padding: 0;
@@ -2164,7 +2250,7 @@ hr {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: #ffd602;
+  background: #1abc9c;
 }
 
 #roadmap::before {
@@ -2229,10 +2315,10 @@ hr {
 #roadmap .__item .text .__ongoing {
   display: table;
   margin-top: 10px;
-  background: rgb(134, 232, 254);
+  background: #1abc9c;
   clear: both;
   padding: 8px;
-  color: #252525;
+  color: #fff;
 }
 
 #roadmap .__item.__left {
@@ -2469,6 +2555,17 @@ hr {
 }
 }
 
+.tutorial
+{
+    background-color: #1abc9c;
+    color:#fff;
+}
+.white
+{
+    background-color: #fff;
+   
+}
+
 .wrapper{
   width:100%;
 }
@@ -2524,13 +2621,14 @@ hr {
 .button-btn {
   padding: 25px;      
   text-decoration: none;
+  background-color: #1abc9c;
   color: #fff;
   font-size: 30px;
   margin: 10px 0;
   display: block;
   text-align: center;
   border-radius: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   font-weight: 600; 
   letter-spacing: 3px;
@@ -2538,10 +2636,11 @@ hr {
 }
 .button-btn:hover
 {   
-    background-color: #1abc9c;
+    background-color: #fff;
     color: #ffffff;
     box-shadow: 0px 7px 9px #696969;
-    background-image: url(../images/btn/hover.jpg); 
+    color:#1abc9c;
+    border: 6px outset #1abc9c;
 }
 
 .button-btn:active {
@@ -2558,6 +2657,16 @@ hr {
      opacity: 0.5;
      margin: 3px 30px;
 }
+
+.hoverable{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  
+  .hoverable:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
 
 .order-form
 {
