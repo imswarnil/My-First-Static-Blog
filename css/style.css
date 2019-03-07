@@ -44,18 +44,12 @@
 
   body {
     font-family: "Poppins", sans-serif;
-                      ;
     background-position: center;  
     background-image: url(../images/bg-main.jpg);
     background-position: 0px 0px;
     background-repeat: repeat;
     
 }
-
-
-
-
-
 
 
 html {
@@ -244,6 +238,18 @@ button {
 .button-anim:hover:before {
     left: 75%;
     opacity: 1;
+}
+.button-border
+{
+        background-color: white; 
+        color: #1abc9c; 
+        border: 2px solid #1abc9c;
+}
+
+.button-border:hover
+{
+        background-color: #1abc9c; 
+        color:#fff; 
 }
 
 
@@ -1369,7 +1375,7 @@ hr {
    }
 }
 
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:400px) {
 
 
 
