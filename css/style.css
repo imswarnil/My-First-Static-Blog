@@ -239,18 +239,6 @@ button {
     left: 75%;
     opacity: 1;
 }
-.button-border
-{
-        background-color: white; 
-        color: #1abc9c; 
-        border: 2px solid #1abc9c;
-}
-
-.button-border:hover
-{
-        background-color: #1abc9c; 
-        color:#fff; 
-}
 
 
 
@@ -701,6 +689,22 @@ div.blog-post {
 
 
 /* Video Tutorial */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
 
 .video-box {
     background: #333333;
@@ -1378,8 +1382,6 @@ hr {
 @media only screen and (max-width:400px) {
 
 
-
-
     b {
        font-weight: 500;
    }
@@ -1419,8 +1421,11 @@ hr {
    }
    
    .sub-title h2 {
-       font-size: 20px;
-       font-weight: 600;
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px;
+    margin: 0;
    }
 
    .sub-title i {
@@ -1568,6 +1573,12 @@ hr {
     content: "\e005";font-size: 30px;
 }
 
+.icon-speedometer:before
+{
+    content: "\e007";
+    font-size: 30px;   
+}
+
 .icon-briefcase:before {
     content: "\e04b";font-size: 30px;
 }
@@ -1590,6 +1601,15 @@ hr {
 
 .icon-puzzle:before {
     content: "\e02d";font-size: 30px;
+}
+
+.skills{
+    padding: 5px;
+}
+.skills img
+{
+   display: none;
+    
 }
 
 }
@@ -2747,4 +2767,43 @@ hr {
 {
 	background-color:red;
 }
-  
+
+.skills
+{
+    padding: 10px;
+}
+.skills span {
+    top: -33px;
+    left: 2%;
+    position: relative;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: inherit;
+    color: #fff;
+}
+.skills img
+{
+    height: 5em;
+    width: 5em;
+    padding: 10px;
+    
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2em;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #1abc9c;
+}
+
+progress::-moz-progress-bar {
+    background-color: #1abc9c;
+}

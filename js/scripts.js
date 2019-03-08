@@ -28,6 +28,7 @@
   12. End Box (Popup When Scroll Down)
   13. Road map scroll
   14. Collapse
+  15. Skills Bar
 
 */
 
@@ -219,6 +220,15 @@
 
             /*Collapse End */ 
    })(jQuery);
+
+   /* Skills Bar Js */
+// we have to remove this code
+  //  $(function() {
+  //   $('progress').each(function() {
+  //     var max = $(this).val();
+  //     $(this).val(0).animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+  //       });
+  // });
 
 
 
