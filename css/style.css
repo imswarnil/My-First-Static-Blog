@@ -114,6 +114,7 @@ button {
     box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
 }
 
+
 .sub-title {
    text-align: center;
    
@@ -124,6 +125,10 @@ button {
     letter-spacing: 2px;
     font-weight: 600;
 
+}
+.sub-title p
+{
+    font-size: 30px;
 }
 .sub-title h3
 {
@@ -158,7 +163,7 @@ button {
 .content-page {
     padding-top: 30px;
     padding-bottom: 10px;
-    margin: 20px 0;
+    margin: 15px 0;
     border-top: 2px dashed #dedede;
     border-bottom: 2px dashed #dedede;
 }
@@ -211,6 +216,10 @@ button {
 }
 
 .button-style {
+    color: #1abc9c;
+    overflow: hidden;
+}
+.button-style:hover {
     color: #1abc9c;
     overflow: hidden;
 }
@@ -1124,6 +1133,10 @@ hr {
     font-weight: 500;
     letter-spacing: 0.8px;
 }
+.footer ul{
+    list-style-type: none;
+}
+
 
 
 /* Social Icons */
@@ -1166,6 +1179,17 @@ hr {
 
 .social-icon li a:hover {
    box-shadow: 0px 8px 15px 0px rgba(90, 91, 95, 0.33);
+}
+
+.social-footer li a
+{
+    width:170px;
+    border-radius: 0;
+}
+
+.social-footer li a i
+{
+    padding: 10px;
 }
 
 .facebook {
@@ -1583,9 +1607,9 @@ hr {
     content: "\e04b";font-size: 30px;
 }
 
-.icon-camrecorder:before {
-    content: "\e07e";font-size: 30px;
-}
+.icon-fire:before {
+    content: "\e01c";font-size: 30px;
+  }
 
 .icon-list:before {
     content: "\e067";font-size: 30px;
@@ -1977,7 +2001,7 @@ hr {
   padding: 20px
 }
 
-/* UiPasta Credit */
+/* Swarnil Credit */
 
 .swarnil-credit {
     color: #333333;
@@ -1992,6 +2016,10 @@ hr {
 
 .swarnil-credit a:hover {
     color: #333333;
+}
+span .swarnil-credit
+{
+    padding: 10px;
 }
 
 
