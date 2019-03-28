@@ -164,7 +164,7 @@ button {
     padding-top: 30px;
     padding-bottom: 10px;
     margin: 15px 0;
-    border-top: 2px dashed #dedede;
+    border-top: 2px dashed #dedede; 
     border-bottom: 2px dashed #dedede;
 }
 
@@ -1005,9 +1005,21 @@ blockquote {
 
 hr {
     margin: 5px;
-    padding: 5px;
+    padding: 1px;
     border: 0;
     border-top: 1px solid #eee;
+}
+
+.hr-1
+{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(26, 187, 154), rgba(0, 0, 0, 0));
+}
+.hr-dashed
+{
+    margin: 10px 0;
+    border-top: 2px dashed #dedede; 
 }
 
 .end {
@@ -2106,100 +2118,6 @@ span .swarnil-credit
   width: 0%;
 }
 
-.parallax-100  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100px;
-    text-align: center;
-    color: white;
-    padding: 1% 0;
-}
-
-.parallax-100 h2 
-{
-    background-color: black;
-    padding: 10px;
-
-}
-
-
-.parallax-150  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 150px;
-    text-align: center;
-    color: white;
-    padding: 3% 0;
-}
-
-.parallax-150 h2 
-{
-    background-color: #1abc9c;
-    opacity: 0.9;
-    padding: 30px;
-    color: white;   
-}
-
-.parallax-200  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 200px;
-}
-
-
-.parallax-250  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 250px;
-}
-.parallax-300  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 300px;
-}
-
-.parallax-400  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 400px;
-}
-.parallax-500  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px;
-}
-
-.parallax-600  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 600px;
-}
-
-.parallax-700  { 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 700px;
-}
-
-
 
 /* Tutorial Cards */
 
@@ -2261,8 +2179,6 @@ span .swarnil-credit
     -webkit-transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
     display: block;
-    width: auto;
-    height: 150px;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
