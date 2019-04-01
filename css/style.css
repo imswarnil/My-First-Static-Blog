@@ -234,6 +234,7 @@ button {
     transition: all 0.3s;
 }
 
+
 .button-style:active:before {
     color: #1abc9c;
 }
@@ -249,8 +250,12 @@ button {
     opacity: 1;
 }
 
-
-
+.dashed-border
+{
+    border: 2px dashed #1abc9c;
+    padding: 10px;
+   
+}
 /* Preloader */
 
 .preloader {
@@ -1454,6 +1459,12 @@ hr {
     text-align: center;
     padding: 7px;
     margin: 0;
+   }
+
+   .sub-title h3
+   {
+    font-size: 15px;
+    text-align: center;
    }
 
    .sub-title i {
