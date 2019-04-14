@@ -1,9 +1,9 @@
 /*
    
-    Template Name : DevBlog - Personal Blog Template
-    Author : UiPasta Team
-    Website : http://www.uipasta.com/
-    Support : http://www.uipasta.com/support/
+    Template Name : Imswarnil Personal Blog
+    Author :  Imswarnil
+    Website : https://imswarnil.com
+    Support : https://imswarnil.com
 	
 	
 */
@@ -220,5 +220,7 @@
 
             /*Collapse End */ 
    })(jQuery);
+
+   
 
   

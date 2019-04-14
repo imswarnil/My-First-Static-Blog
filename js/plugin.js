@@ -7,6 +7,7 @@
   5. Owl Carousel
   6. Parallax
   7. Materiallize Javascript Code ( Cards )
+  8. Sticky Side bar
 
 */
 
@@ -275,6 +276,5 @@ function myFunction() {
     }
   });
 
-
-
-    
+  // Sticky Side Bar
+  
