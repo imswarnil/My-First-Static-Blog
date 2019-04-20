@@ -1640,10 +1640,6 @@ hr {
     content: "\e067";font-size: 30px;
 }
 
-.icon-layers:before {
-    content: "\e034";font-size: 30px;
-}
-
 .icon-bubbles:before {
     content: "\e04a";font-size: 30px;
 }
@@ -1651,6 +1647,10 @@ hr {
 .icon-puzzle:before {
     content: "\e02d";font-size: 30px;
 }
+.icon-social-youtube:before {
+    content: "\e008";
+    font-size: 30px;
+  }
 
 .skills{
     padding: 5px;
@@ -1811,6 +1811,11 @@ hr {
 .padding-0 {
 	padding: 0px !important;
 }
+
+.padding-5 {
+	padding: 5px !important;
+}
+
 
 .padding-10 {
 	padding: 10px !important;
@@ -2230,13 +2235,19 @@ span .swarnil-credit
             transform: translateX(-100%);
   }
 
+  .card-border-video
+{
+    border-bottom: 5px solid #1abc9c;
+    
+    
+}
+
 .card-border-up
 {
     border-top: 5px solid #1abc9c;
     border-radius:10px;
     
 }
-
 .card-border-down
 {
     border-bottom: 5px solid #1abc9c;
