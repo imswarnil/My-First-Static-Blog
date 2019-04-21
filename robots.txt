@@ -1,5 +1,0 @@
-
-User-agent: *
-Disallow: 
-Disallow: /js
-Sitemap: https://imswarnil.com/sitemap.xml
