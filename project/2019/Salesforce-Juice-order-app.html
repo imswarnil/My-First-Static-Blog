@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Meta Tag -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Salesforce Lemonade Stand Application, Salesforce Application,Salesforce lemonade stand lightning application,salesforce application from scratch, SFDC, Salesforce apps,Salesforce projects,Salesforce juice order app,building salesforce lightning application ">
+  <meta name="keywords" content="Salesforce Lemonade Stand Or Juice Ordering Application,build salesforce app from scratch,CRUD operation in salesforce, Aura CRUD operation,SweetAlert In Salesforce,MateriallizeCSS in salesforce,JS framework in salesforce,salesforce project,salesforce project ideas,salesforce developer,salesforce lightning appl,salesforce app,build salesforce applications
+  ,custom salesforce app,
+  build salesforce lightning app,
+  build salesforce mobile app,
+  salesforce custom application development,
+  salesforce build an app,
+  build a salesforce app,
+  build custom apps salesforce,
+  build app using salesforce,
+  build apps fast with salesforce platform services,
+  build app for salesforce,
+  how to build salesforce app,
+  build your own salesforce app">
+  <meta name="author" content="Swarnil, Swarnil Singhai, #Swarnil, @Swarnil, @hashtag_swarnil, raja swarnil singhai, ">
+  <meta name="url" content="http://imswarnil.com,imswarnil.github.io,imswarnil.com,www.imswarnil.com">
+  <meta name="copyright" content="imswarnil">
+  <meta name="robots" content="index,follow">
+
+
+  <title>Juice Order Application In Salesforce || Lemonade Stand || Salesforce Lightning App From Scratch</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="../../images/favicon/apple-touch-icon.png">
+
+  <!-- All CSS Plugins -->
+  <link rel="stylesheet" type="text/css" href="../../css/plugin.css">
+
+
+  <!-- Google Web Fonts  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script type='text/javascript'
+    src='//platform-api.sharethis.com/js/sharethis.js#property=5cc297254b94860012b42b9c&product=inline-share-buttons'
+    async='async'></script>
+
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <!-- Syntax Highlighter  -->
+  <link rel="stylesheet" type="text/css" href="../../css/syntax/shCore.css">
+  <link rel="stylesheet" type="text/css" href="../../css/syntax/shThemeDefault.css">
+
+  <!-- Mail Chimp Site Authentication -->
+
+  <script
+    id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/f53094feb954a52650afa9f48/79b73c64dfd3d67ecc5a025cc.js");</script>
+
+
+  <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+	   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138866291-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138866291-1');
+  </script>
+
+
+  <!-- One Signal Push Script -->
+
+  <link rel="manifest" href="../..//manifest.json" />
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "d51f2074-c095-4932-be55-c2ccd1f8baea",
+      });
+    });
+  </script>
+
+  <script src="//code.tidio.co/ytnkezwkwfw1b5quvcgybhno0urhqk8m.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1291242080282540",
+            enable_page_level_ads: true
+       });
+  </script>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <!--  <div class="preloader">
+    <div class="rounder"></div>
+  </div -->
+  <!-- Preloader End -->
+
+  <div class="header">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar1"></div>
+    </div>
+  </div>
+
+  <div class="bottam">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar2"></div>
+    </div>
+  </div>
+
+
+
+  <div id="main">
+    <div class="container">
+      <div class="row">
+
+
+
+        <!-- About Me (Left Sidebar) Start -->
+        <div class="col-md-3">
+          <div class="about-fixed z-depth-4">
+
+            <div class="my-pic">
+              <img src="../../images/pic/my-pic.png" alt="">
+              <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i
+                  class="icon-menu menu"></i></a>
+              <div id="menu" class="collapse">
+                <ul class="menu-link">
+                  <li><a href="../../index.html">Home</a></li>
+                  <li><a href="../../about.html">Know Me</a></li>
+                  <li><a href="../../work.html">My Work</a></li>
+                  <li><a href="../../contact.html">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="my-detail">
+              <div class="white-spacing">
+                <h1>Swarnil Singhai</h1>
+                <span>Software Engineer By Profession <br> Youtuber By Passion </span>
+              </div>
+
+              <ul class="social-icon">
+                <li><a href="https://www.facebook.com/swarnil.singhai" target="_blank" class="facebook"><i
+                      class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/hashtag_swarnil" target="_blank" class="twitter"><i
+                      class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/swarnil-singhai-b89224104/" target="_blank" class="linkedin"><i
+                      class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCRkqSGyfZkhOzZIHjlgBXcQ?view_as=subscriber"
+                    target="_blank" class="youtube"><i class="fa fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- About Me (Left Sidebar) End -->
+
+
+
+
+        <!-- Blog Post (Right Sidebar) Start -->
+        <div class="col-md-9">
+          <div class="col-md-12 page-body">
+            <div class="row">
+
+              <div class="sub-title">
+                <h2 class="page-body"> Im <span class="main-color"> Swarnil</span> </h2>
+                <div class=" hoverable">
+
+                  <script>
+                    (function () {
+                      var cx = '009078340945892310687:mhw7fi6ib1u';
+                      var gcse = document.createElement('script');
+                      gcse.type = 'text/javascript';
+                      gcse.async = true;
+                      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                      var s = document.getElementsByTagName('script')[0];
+                      s.parentNode.insertBefore(gcse, s);
+                    })();
+                  </script>
+                  <gcse:search></gcse:search>
+
+                </div>
+              </div>
+
+
+              <div class="menu-title">
+                <a href="../../index.html" class="home-icon" title=""><i class="icon-home">
+                    <p>Home</p>
+                  </i></a>
+                <a href="../../about.html" class="home-icon"><i class="icon-user">
+                    <p>Know Me</p>
+                  </i></a>
+                <a href="../../roadmap.html" class="home-icon"><i class="icon-speedometer">
+                    <p>Roadmap</p>
+                  </i></a>
+                <a href="../../work.html" class="home-icon"><i class="icon-briefcase">
+                    <p>My Work</p>
+                  </i></a>
+                <a href="../../story.html" class="home-icon"><i class="icon-energy">
+                    <p>Stories</p>
+                  </i></a>
+                <a href="../../tutorial.html" class="home-icon"><i class="icon-list">
+                    <p>Tutorial</p>
+                  </i></a>
+                <a href="../../videos.html" class="home-icon"><i class="icon-social-youtube">
+                    <p>Videos</p>
+                  </i></a>
+                <a href="../../contact.html" class="home-icon"><i class="icon-bubbles">
+                    <p>Contact</p>
+                  </i></a>
+              </div>
+
+              <ol class="breadcrumb margin-top-10">
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../work.html">Juice Ordering Application</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Juice Order App Using Salesforce Lightning</li>
+              </ol>
+
+             
+                <!-- Your Main Page Starts From Here -->
+
+              <div class="col-md-12 content-page">
+                <div class="blog-post">
+
+                    <div class="post-title center">
+                        <h2>Juice Order App Using Salesforce Lightning</h2>
+                        <p>Juice Ordering App Using Salesforce , SweetAlert Js Library And MateriallizeCSS Framework</p>
+                        <div class="btn-group-toggle center margin-bottom-10 margin-top-10">
+                          <a href="#overview" class="btn category-button active">Application Overview</a>
+                          <a href="#implementaion" class="btn category-button"> Implementaion Guide</a>
+                          <a href="#resource" class="btn category-button active">Code And Project Files </a>
+                        </div>
+                        <h2>My App Video</h2>
+        
+                        <div class="card youtube-top center">
+                            <div class="card-image">
+                                <iframe class="youtube-border" src="https://www.youtube.com/embed/uOL1O6ZFGUE" frameborder="0" allow="accelerometer; autoplay;" allowfullscreen>
+                                </iframe> 
+                               </div>
+                               <div class="card-content">
+                                  Juice Order App Video
+                            </div>
+                            <div class="sharethis-inline-share-buttons"></div>
+                        </div>
+                       </div>
+
+                  <!-- Post Blockquote Start -->
+                  <div class="post-quote margin-top-30 margin-bottom-30">
+                    <blockquote>Once I want to become Full stack Developer, Now i am salesforce Developer its almost
+                      same. <br>
+                      #Letsdosalesforce</blockquote>
+                  </div>
+                  <!-- Post Blockquote End -->
+
+                  <div class="col-md-12">
+                    <div class="post-title center">
+                      <h2>Framework &<i class="fa fa-app" aria-hidden="true"></i> Technology </h2>
+                    </div>
+
+
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card card-border-up">
+                          <div class="card-image img-responsive padding-20">
+                            <img class="img-responsive" src="../../images/portfolio/juice-order/light.png">
+                          </div>
+                          <div class="card-content">
+                            <span class="card-title">Salesforce Aura Framework</span>
+                            <p>Its Framework To Build Application On Force.com provided By Salesforce.</p>
+                          </div>
+                          <div class="card-action green">
+                            <a href="https://materializecss.com/" target="_blank" class=" white-text">Materiallize
+                              Official Site </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 ">
+                        <div class="card card-border-up">
+                          <div class="card-content">
+                            <div class="card-image img-responsive padding-20">
+                              <img class="img-responsive" src="../../images/portfolio/juice-order/material.png">
+                            </div>
+                            <span class="card-title">MateriallizeCSS</span>
+                            <p>Its CSS & JS Framework Just Like Bootstrap Inspired By Material Design, Used For Creating
+                              UI Components. I Have to create Form. </p>
+                          </div>
+                          <div class="card-action green">
+                            <a href="https://trailhead.salesforce.com/en/content/learn/modules/lex_dev_lc_basics"
+                              target="_blank" class=" white-text">Aura Basics Site </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 ">
+                        <div class="card card-border-up">
+                          <div class="card-content center">
+                            <div class="card-image img-responsive padding-20">
+                              <img class="img-responsive" src="../../images/portfolio/juice-order/sweet.png">
+                            </div>
+                            <span class="card-title">SweetAlert JS Library</span>
+                            <p>Its Another Awesome JS Library can be used for Alert, I Have Used It for Validation Error
+                              Pop Ups and when juice ordered Succesfully Pop Up. You can find JS and CSS files In My
+                              Project</p>
+                          </div>
+                          <div class="card-action green">
+                            <a href="https://sweetalert.js.org/guides/" target="_blank" class=" white-text">SweetAlert
+                              Official Site </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Application OverView Starts-->
+                    <div id="overview">
+                      <div class="post-title center">
+                        <h2> Application <i class="fa fa-app" aria-hidden="true"></i> Overview </h2>
+                        <meta content="Meta Tags">
+                      </div>
+                      <div class="post-title center">
+                        <p>This Is <b>Simple Salesforce Lightning Application</b> which can be used for taking Juice
+                          Orders. there is already one project available on trailhead <a
+                            href="https://trailhead.salesforce.com/en/content/learn/projects/lemonade-stand-workshop"
+                            target="__blank">Lemonade Stand</a> which they have created without using code, i have
+                          created application which use code as well as <b class="green white-text"> External javascript
+                            libraries ( MateriallizeCSS and Sweetalert). </b> If you want to build your own app i have
+                          shared Implementaion Guide along with all Assets.This Build This App From Scratch You Need Basic Knowledge Of Salesforce.
+                        </p>
+                      </div>
+
+                      <div class="post-title center ">
+                        <h3>Basic Use Case</h3>
+                        <p>Juice Order Application Takes <span class="green padding-5"><b class="white-text"> Flavour
+                              Name </b></span> i.e Masala Lime, Lime Soda..</p>
+                        <p>Also You Need To Provide <span class="green padding-5"><b class="white-text"> Size
+                            </b></span> i.e Small / Medium / Large .</p>
+                        <p>And Most Important <span class="green padding-5"><b class="white-text"> Price </b></span>
+                          Cost $ Of Juice.</p>
+                        <p>Juice Order Homepage Image Given below , UI is created with the help of
+                          <b>MateriallizeCSS.</b></p>
+                        <div class="z-depth-3 margin-top-20 margin-bottom-20">
+                          <img class="img-responsive " src="../../images/portfolio/juice-order/homepage.jpg"
+                            alt="Juice Order Homepage">
+                          <div class="orange darken-3">
+                            <p> <b class="center white-text">Juice Order Application Homepage</b> </span></p>
+                          </div>
+                        </div>
+                        <p> After Entering Values Flavour Name, Size, Price Press Submit Order Buttoon, It Will Trigger
+                          Lightning Javascript Controller Which Will Check and validate your form data, let say you by
+                          mistake forgot to add Flavour Name in your order it will through Error and state error message
+                          "Flavour Is Missing". I Have Used <b>SweetAlert</b> Which tells User You forgot to add Flavour
+                          Name.</p>
+                        <div class="z-depth-3 margin-top-30 margin-bottom-30">
+                          <img class="img-responsive " src="../../images/portfolio/juice-order/error.jpg"
+                            alt="Juice Order Homepage">
+                          <div class="orange darken-3">
+                            <p> <b class="center white-text">SweetAlert Usage For Validation Popup</b> </span></p>
+                          </div>
+                        </div>
+                        <p>And Everything Correct It Will Store Data In Salesforce Database (Store Data In Drink__c
+                          Custom Object), And Acknowledge user that your order placed succesfully, sweetAlert Popup will
+                          appear Juice Ordered<b>"Order Is Placed Succesfully "</b> </p>
+                        <div class="z-depth-3 margin-top-30 margin-bottom-30">
+                          <img class="img-responsive " src="../../images/portfolio/juice-order/success.jpg"
+                            alt="Juice Order Homepage">
+                          <div class="orange darken-3">
+                            <p> <b class="center white-text">SweetAlert PopUp For Success Message</b> </span></p>
+                          </div>
+                        </div>
+                        <p>Form Data Will Be stored In Our Database with Drink Order ID.</b> </p>
+                        <div class="z-depth-3 margin-top-30 margin-bottom-30">
+                          <img class="img-responsive " src="../../images/portfolio/juice-order/drink.jpg"
+                            alt="Juice Order Homepage">
+                          <div class="blue darken-3">
+                            <p> <b class="center white-text">Drink Order Details In Salesforce Database. </b> </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="placeholder-1">
+                          <p>
+                            <b> I have created this tutorial to learn CRUD (Create, Red, Update, Delete) Operations in
+                              salesforce lightning. in this app we are inserting data into database. in Implementaion
+                              Guide i will be providing code and all the details if you want to learn how to insert
+                              record in salesforce using aura/lightning in salesforce.</b> </p>
+                        </div>
+
+
+                        <div class="post-title center">
+                          <h2> Flow Diagram Of <i class="fa fa-app" aria-hidden="true"></i> My Application </h2>
+                          <meta content="Meta Tags">
+                        </div>
+
+                        <div class="margin-top-20 margin-bottom-20 ">
+                          <img class="img-responsive" src="../../images/portfolio/juice-order/Diagram-2.jpg"
+                            alt="Juice Order Salesforce Application Flow Chart">
+                        </div>
+                        <div class=" green margin-top-10 margin-bottom-10">
+                          <p class="center white-text"> How My Application Work :- <span></span><a class="white-text"
+                              href="https://github.com/imswarnil/Juice-Order-Lightning-App-Using-MateriallizeCSS-and-Sweet-Alert">View
+                              This Project On Github <i class="fa fa-lg fa-github"></i></a> </span></p>
+                        </div>
+
+                        <p>In <b>Implementaion guide </b>You will find step by step instruction and code, that you can
+                          follow and build your own app which can take order, You Can Build Your Own Similar App Like :-
+                        </p>
+
+
+                        <blockquote>
+                          Ice Cream Stand,
+                          Sweet Corn Stand,
+                          Coffee Shop / Stand Type Of Application
+                        </blockquote>
+
+
+                        <hr class="hr-dashed">
+
+
+
+                        <div class="card center green margin-top-20 margin-bottom-20">
+                          <div class="card-content white-text">
+                            <span class="card-title ">Download Project</span>
+                            <div class="card-action">
+                              <p class="white-text">Download This Project Before Moving To Implementaion Guide.All The
+                                Resources Which Is Used In This Project Is available in my Project Folder.</p>
+                              <p class="white green-text">Static Resource :- SweetAlert JS & CSS Files / MateriallizeCSS
+                                JS and CSS Files</p>
+                              <p class="white green-text">Classes :- Contains Apex Class</p>
+                              <p class="white green-text">Aura :- Lemonade_1 Contains Front End Written In
+                                MateriallizeCSS (Form and UI of our App)</p>
+                              <p class="white green-text">Aura :- Lemonade_1Controller Contains Javascript Controller
+                                Used for validation and calling Apex Class.</p>
+                              <p class="white green-text">Lemonade_Stand.app Wrap Up All The Files Into One. </p>
+                            </div>
+                            <div class="card-action text-center">
+                              <a
+                                href="https://github.com/imswarnil/Juice-Order-Lightning-App-Using-MateriallizeCSS-and-Sweet-Alert/archive/master.zip">
+                                <button type="button" class="btn white green-text btn-lg btn-block"> <i
+                                    class="fa fa-download" aria-hidden="true"></i> Download Project</button></a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!--Application Overview Ends-->
+
+
+                    <!-- Why I Created This App Starts-->
+                    <hr class="hr-dashed">
+                    <div id="implementaion">
+                      <div class="post-title center margin-top-20 margin-bottom-20">
+                        <h2> Implementaion <i class="fa fa-app" aria-hidden="true"></i> Guide </h2>
+                        <p>You Just Need Basic Understanding Of Salesforce To Build This Project. If you don't have
+                          Salesforce Developer Org Create Now <a href="https://developer.salesforce.com/signup"><b> Sign
+                              Up For Developer Org.</b></a></p>
+                      </div>
+
+                      <div class="list list-style margin-top-30">
+                        <div class="post-title">
+                          <h2>Let's Start Building The App</h2>
+                        </div>
+                        <div class="section">
+                          <li>Login To Your Developer Org.</li>
+                          <li>On Top Right Corner goto Setup -> Create App -> App Name :- <span
+                              class="green white-text padding-5">Juice Ordering App</span></li>
+                          <li>Goto Object Manager -> Create Cutom Object -> Object Name :- <span
+                              class="green white-text padding-5">Drinks Order</span></li>
+                          <p class="grey white-text">Choose Auto-Number it will be used as Order ID </p>
+                          <li>Create Custom Field -> Datatype :- Text -> Field Name :- <span
+                              class="green white-text padding-5">Flavour Name</span></li>
+                          <li>Create One More Custom Field -> Datatype :- Text -> Field Name :- <span
+                              class="green white-text padding-5">Size</span></li>
+                          <li>Create Custom Field -> Datatype :- Number -> Field Name :- <span
+                              class="green white-text padding-5">Price</span></li>
+                          </div>
+                      </div>
+
+                      <div class="list list-style margin-top-30">
+                        <div class="post-title">
+                          <h2>Uploading External JavaScript libraries</h2>
+                          <p>If you have Downloaded my project there you will find 4 files which includes
+                            MateriallizeCSS library <span class="green white-text">materialcss & materialjs </span> And
+                            SweetAlert Important JS and CSS Files <span class="green white-text">sweetalertcss &
+                              sweetalertjs </span> </p>
+                        </div>
+                        <div class="section">
+                          <li>Goto Setup -> Search Static Resource -> New :- <span
+                              class="green white-text padding-5">Upload Materialcss</span></li>
+                          <li>Goto Setup -> Search Static Resource -> New :- <span
+                              class="green white-text padding-5">Upload materialjs</span></li>
+                          <li>Goto Setup -> Search Static Resource -> New :- <span
+                              class="green white-text padding-5">Upload sweetalertcss</span></li>
+                          <li>Goto Setup -> Search Static Resource -> New :- <span
+                              class="green white-text padding-5">Upload sweetalertjs</span></li>
+                          <li>Goto Object Manager -> Create Cutom Object -> Object Name :- <span
+                              class="green white-text padding-5">Drinks Order</span></li>
+                          <p class="grey white-text">Make Sure They Are Public not private we will use these files when
+                            we move to coding. </p>
+                          </div>
+                        <p>Now Next Step is we need to create Lightning Component and need to write code for inserting
+                          data into Our Drink Orders, Lets Move To Coding Part. </p>
+                      </div>
+
+                      <img class="img-responsive" src="../../images/portfolio/juice-order/Diagram-1.jpg">
+                      <div class="green">
+                        <p class="center"><b class="white-text">Juice Ordering App Summary In 4 steps.</b></p>
+                      </div>
+                    </div>
+                    <!-- Why I Created This App Ends-->
+
+
+                    <!-- Resource of App Starts-->
+                    <hr class="hr-dashed">
+                    <div id="resource">
+                      <div class="post-title center">
+                        <h2> Coding & <i class="fa fa-app" aria-hidden="true"></i> For Juice App. </h2>
+                      </div>
+                      <p>Now we will creating lightning Component and call apex controller to store Lightning
+                        Component/Form data into our Salesforce Database ( Drink_Orders__c Object). and also learn how
+                        to use sweet alert in Salesforce. </p>
+                      <div class="col-md-6 center">
+                        <p class="green white-text"> Open Developer Console </p>
+                        <img class="img-responsive"
+                          src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/developer_console/developer_console_intro/images/ccc5f68618965dce263da26c2f2f1980_dev_console_sc.png">
+                      </div>
+                      <div class="col-md-6 center">
+                        <p class="green white-text">Developer Console Is Cloud Based IDE provided by salesforce for
+                          coding.</p>
+                        <img class="img-responsive"
+                          src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_dev_lc_basics/lex_dev_lc_basics_create/images/0c025c7cae21bda7ff929ea187020280_lex_dev_lc_hello_world.png">
+                      </div>
+
+                      <div class="list list-style margin-top-20">
+                        <div class="post-title">
+                          <h2>Lets Start Coding Part Now</h2>
+                          <p>First Need To Create One Lightning Component </p>
+                        </div>
+                        <div class="section clear">
+                          <li>In Developer Console -> Select File -> New Lightning Component :- <span
+                              class="green white-text padding-5">Lemonade_1</span></li>
+                          <p>Copy Paste the Following Code Into Lemonade_1 Component.</p>
+                          <!-- Post Coding (SyntaxHighlighter) Start -->
+                          <div class="margin-top-40 margin-bottom-40">
+                            <pre class="brush: js">
+                          <aura:component controller="CreateOrder">
+
+                              <!-- Define Attribute-->
+                              <aura:attribute name="Drink" type="Drink_Order__c" default="{'sobjectType': 'Drink_Order__c',
+                                                   'Flavor__c': '',
+                                                   'Size__c': '',
+                                                   'Price__c': ''
+                                                 }" />
+                          
+                              <nav>
+                                  <div class="nav-wrapper orange accent-4">
+                                      <a class="brand-logo center grey-text text-lighten-5">Lemonade Stand <i style="font-size:50px;"
+                                              class="material-icons Large">local_drink</i> </a>
+                                  </div>
+                              </nav>
+                              <div class="section white">
+                                  <div class="row container">
+                          
+                                      <h5 class="header center">Order Lemon Juice</h5>
+                          
+                                      <div class="card">
+                                          <div class="card-content">
+                                              <div class="row">
+                                                  <form class="col s12">
+                          
+                                                      <div class="row input-field ">
+                                                          <div class="col s2">
+                                                              <i class="material-icons medium">local_drink</i>
+                                                          </div>
+                                                          <div class="col s10">
+                                                              <lightning:input name="input3" type="text" value="{!v.Drink.Flavor__c}"
+                                                                  label="Enter Your Flavour Name" />
+                                                          </div>
+                                                      </div>
+                          
+                                                      <div class="row input-field ">
+                                                          <div class="col s2">
+                                                              <i class="material-icons medium">equalizer</i>
+                                                          </div>
+                                                          <div class="col s10">
+                                                              <lightning:input value="{!v.Drink.Size__c}"
+                                                                  label="Which Size Medium / Small / Large" />
+                                                          </div>
+                                                      </div>
+                          
+                                                      <div class="row input-field ">
+                                                          <div class="col s2">
+                                                              <i class="material-icons medium">attach_money</i>
+                                                          </div>
+                                                          <div class="col s10">
+                          
+                                                              <lightning:input value="{!v.Drink.Price__c}" label="Enter The Price Of Juice" />
+                                                          </div>
+                                                      </div>
+                          
+                          
+                          
+                                                      <div class="row center">
+                          
+                                                          <lightning:button class="btn waves-effect waves-light orange accent-4" variant="base"
+                                                              label="Submit Your Order" title="Base action" onclick="{!c.create }" />
+                          
+                                                      </div>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                      </div>
+                          
+                                  </div>
+                              </div>    
+                          </aura:component>
+          </pre>
+                            <p>We Have Created Homepage For Our App With Form Using MateriallizeCSS, You Can see we have
+                              used API name of custom fields Flavour name, Size , And Price Of Drink Orders Object which
+                              specify where we want to save our data but this is half work done we need to Write
+                              Javascript Controller For Validation and calling Apex class, Because apex class is
+                              responsible for sending data from Form To Our Database.
+                              <blockquote>In Submit Button we have used [onclick="{!c.create }" Now we need to write
+                                create in our JS controller.</blockquote>
+                            </p>
+                          </div>
+                          <!-- Post Coding (SyntaxHighlighter) End -->
+                          <li> In Lemonade_1 -> Right hand side Click On Controller :- <span
+                              class="green white-text padding-5">Lemonade_1Controller</span></li>
+                          <p>It Will Create JS Controller with name "Lemonade_1Controller" Now Just Copy Paste Code
+                            Given Below.</p>
+
+                          <!-- Post Coding (SyntaxHighlighter) Start -->
+                          <div class="margin-top-40 margin-bottom-40">
+                            <pre class="brush: js">
+                          ({
+                            create: function (component, event, helper) {
+                        
+                                //getting the Order information
+                                var Drink = component.get("v.Drink");
+                        
+                                //Validation
+                                if ($A.util.isEmpty(Drink.Flavor__c) || $A.util.isUndefined(Drink.Flavor__c)) {
+                                    swal("Flavour Is Missing", "Flavour Is Required to order juice", "error");
+                                    return;
+                                }
+                                if ($A.util.isEmpty(Drink.Size__c) || $A.util.isUndefined(Drink.Size__c)) {
+                                    swal("Size Is Missing", "Please Add Size :- Small / Medium / Large", "error");
+                                    return;
+                                }
+                                if ($A.util.isEmpty(Drink.Price__c) || $A.util.isUndefined(Drink.Price__c)) {
+                                    swal("Price Is Missing", "You Have Not Entered Amount Of Juice", "error");
+                                    return;
+                                }
+                        
+                                //Calling the Apex Function
+                                var action = component.get("c.PlaceOrder");
+                        
+                                //Setting the Apex Parameter
+                                action.setParams({
+                                    Drink: Drink
+                                });
+                        
+                                //Setting the Callback
+                                action.setCallback(this, function (a) {
+                                    //get the response state
+                                    var state = a.getState();
+                        
+                                    //check if result is successfull
+                                    if (state == "SUCCESS") {
+                                        //Reset Form
+                                        var newOrder = {
+                                            'sobjectType': 'Drink_Order__c',
+                                            'Flavor__c': '',
+                                            'Size__c': '',
+                                            'Price__c': ''
+                                        };
+                                        //resetting the Values in the form
+                                        component.set("v.Drink", newOrder);
+                                        swal("Juice ordered", "Order is Placed Successfully", "success");
+                                    } else if (state == "ERROR") {
+                                        alert('Error in calling server side action');
+                                    }
+                                });
+                        
+                                //adds the server-side action to the queue        
+                                $A.enqueueAction(action);
+                        
+                            }
+                        
+                        })
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var elems = document.querySelectorAll('.fixed-action-btn');
+                            var instances = M.FloatingActionButton.init(elems, options);
+                        });
+          </pre>
+                            <p> JavaScript Code will Validate the data for flavour,size and price , if it will be empty
+                              or undefined it will through error and not allow you to place order.</p>
+                            <blockquote>If You can notice in Place of <b class="green-text">Alert</b> we are using <b
+                                class="pink-text text-lighten-1">swal</b>, its <b>SweetAlert Syntax For alerts</b>
+                              swal("Flavour Is Missing", "Flavour Is Required to order juice", "error"); You just need
+                              basic Understanding of how sweetalert work and how to specify arguments, its very easy to
+                              use in the same way, if there is no error in validation i have used swal("Juice ordered",
+                              "Order is Placed Successfully", "success");
+                              here i have used argument success which affects the icon on alert.
+                            </blockquote>
+                          </div>
+                          <!-- Post Coding (SyntaxHighlighter) End -->
+                          <li>Goto Developer Console -> File -> New :- Apex Class -> <span
+                              class="green white-text padding-5">CreateOrder </span></li>
+
+                          <p>Copy Paste Code Given Below Into CreateOrder Apex Class.</p>
+
+                          <!-- Post Coding (SyntaxHighlighter) Start -->
+                          <div class="margin-top-40 margin-bottom-40">
+                            <pre class="brush: js">
+                          public with sharing class CreateOrder {
+
+                            @AuraEnabled
+                            public static void PlaceOrder (Drink_Order__c Drink){
+                                
+                                try{
+                                    System.debug('CreateOrder::PlaceOrder::Drink'+Drink);
+                                    
+                                    if(Drink != null){
+                                        insert Drink;
+                                    }
+                                    
+                                } catch (Exception ex){
+                                    
+                                }
+                                
+                            }    
+                        }
+          </pre>
+
+                            <p> This Class will take Form Data into PlaceOrder argument which is passed by javascript
+                              controller to Class method and it will check if its not null it will insert Form data into
+                              drink Orders object in Salesforce.
+                            </p>
+                            <!-- Post Coding (SyntaxHighlighter) End -->
+                          </div>
+                          <!-- Post Coding (SyntaxHighlighter) End -->
+                          <div class="post-title margin-bottom-10 ">
+                            <h2>Final Steps Create Lightning App & Preview your app.</h2>
+                            <p>Now Final Steps Adding Component Lemonade_1 To Our App and Adding External libraries
+                              Refrence (SweetAlert and MateriallizeCSS ) And Preview Our Application.</p>
+                          </div>
+                          <li> File -> New Lightning App :- Name :- <span
+                              class="green white-text padding-5">Lemonade_Stand ( You Can Give Your Name) </span></li>
+                          <p>Copy Paste Code Given Below Into Lemonade_Stand App</p>
+                          <!-- Post Coding (SyntaxHighlighter) Start -->
+                          <div class="margin-top-30 margin-bottom-20">
+                            <pre class="brush: js">
+                                <aura:application>
+                                    <ltng:require styles="{!$Resource.materialcss}" /> 
+                                    <ltng:require scripts="{!$Resource.materialjs}" />  
+                                    <ltng:require styles="{!$Resource.sweetalertcss}" />
+                                    <ltng:require scripts="{!$Resource.sweetalertjs}" />
+                                    <aura:dependency resource="c:CreateOrder" />
+                                    <c:Lemonade_1 />
+                                </aura:application>
+          </pre>
+
+          // HELLO
+
+
+          <div class="list list-style margin-top-30">
+            <div class="section">
+              <p>Above Code shows how you can use External JS & CSS library or your own custom css in aura framework with the help of Static resouce, You remember 4 Files we uploaded we are using those files here. You Can Use Other Library just remeber the syntax, <br>For CSS Files :- require style and then <span class="green white-text">"{!$Resource.Your_CSS_FileName}"</span> & For Javascript Use Ltng Scripts<span class="green white-text">"{!$Resource.Your_JS_FileName}"</span>You Can use multiple JS Library if required, But Salesforce Certified folks Suggested we must use lightning design system. but i use External Library Because i want to learn and juice app looks good in MateriallizeCSS What you think Comment Down Below ?</p>
+              <p>we Have to add dependency if you remember we have Written CreateOrder Class outside the component here we need to provide Refrence than only it will work, and most important we have to add our lightning component which we have created <span class="green white-text padding-5">Lemonade_1</span>Syntax for adding Lightning Component in lightning App Line 7 where you need to specify your component name. you can add multiple component, Create Separate Navbar with buttons for custom events create new component for form and merge it into Lightning application. Cool Right ?                          </p>
+                
+              </div>
+          </div>
+                          
+                            <!-- Post Coding (SyntaxHighlighter) End -->
+                          </div>
+                          <!-- Post Coding (SyntaxHighlighter) End -->
+                        </div>
+                        <div class="post-title center margin-bottom-10 ">
+                            <h2 class="card green white-text">Preview Your App And Test It</h2>
+                            <p class="card padding-10">In Lightning App Right Handside Box You Can see one button Preview Just Click On It , Woho ! Your App Is Working Fine , Try To add Flavour Name , Kala Khatta Or Lime Specify Size Small/Medium/Large and then Price and submit, You Will Get Order Success Beautiful Popup with the help of sweetalert and now you need to test data you inserted is present in your database or not goto salesforce -> Object Manager -> Drink Order -> You will see automatic ID will Be Generated based on your formula for me its D-0040 And all the details </p>
+                          </div>
+                        <div class="z-depth-2 margin-top-30 margin-bottom-30">
+                          <img class="img-responsive " src="../../images/portfolio/juice-order/drink.jpg"
+                            alt="Juice Order Homepage">
+                          <div class="green center">
+                            <p> <b class=" white-text">My App Is Working Fine And Yours ?</b> </span>
+                            </p>
+                          </div>
+                        </div>
+
+                        <p>I Hope You Enjoyed This Application and post if you want more projects Like This Comment below and also consider sharing my work Upvote if you like, and if you have any suggestion please go ahead. I will Be bring Salesforce Tutorial Very Soon My Logo Is already Ready . </p>
+                        <img class="card z-depth-2 img-responsive " src="../../images/tutorial/salesforce/apex.jpg"
+                        alt="Salesforce Sauce">
+                        <p class="margin-top-20 margin-bottom-20">I Have Plans I will be making Tutorial Project Tips and tricks and much more in future, i already have plans i will utilise my web developement skills, Web Designing, Video Editing Skills to grow in salesforce ecosystem. Will Back With Another Application Very Soon Till Than You can checkout my site if you are new here.</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="donate-box margin-top-20 margin-bottom-20 center">
+                                    <p class="green white-text">You Can Support My Work by donating.</p>
+                                    <div class="donate-placeholder center">
+                                      <a href="../../images/donate.jpg" class="image-popup">
+                                      <img class="center" src="../../images/donate.jpg" alt="">
+                                      </a>
+                                    </div>
+                                    <p class="green white-text ">You Can Use Paytm, Google Tez, PhonePay, BHIM To Scan.</p>
+                                  </div>
+                            </div>
+                          </div>
+                          <p class="center margin-top-30"> <b>Stay Tuned On Imswarnil, Good Stuff Is On The Way. </b></p>
+                      </div>
+                    </div>
+                    <!--  Resource of this App Ends-->
+
+                    
+
+
+
+                  </div>
+                </div>
+
+
+                <!-- Subscribe Form Start -->
+                <div class="col-md-8 col-md-offset-2">
+                  <form id="mc-form" method="post"
+                    action="https://imswarnil.us16.list-manage.com/subscribe/post?u=f53094feb954a52650afa9f48&amp;id=5544d0bca8"
+                    method="post" id="mc-embedded-subscribe-form" class="validate" novalidate>
+                    <div class="subscribe-form margin-top-20">
+                      <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
+                      <button class="submit-btn" type="submit">Submit</button>
+                    </div>
+                    <p>Subscribe to my weekly newsletter</p>
+                    <label for="mc-email" class="mc-label"></label>
+                  </form>
+                </div>
+                <!-- Subscribe Form End -->
+
+                <!-- Disqus Code Start  (Please Note: Disqus will not be load on local, You have to upload it on server.)-->
+                <div id="disqus_thread"></div>
+                <script>
+
+                  /**
+                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://imswarnil-com.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                    powered by Disqus.</a></noscript>
+                <!-- Disqus Code End -->
+
+
+                <!-- Post Comment (Disqus) End -->
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Footer Start -->
+          <div class="col-md-12 page-body margin-top-30 footer">
+            <footer>
+              <div class="content-page ">
+                <div class="row ">
+                  <div class="col-md-3 col-sm-3">
+                    <span class="text-center light">Quick Links</span>
+                    <p>
+                      <ul>
+                        <li class="list"><a href="../../index.html">Homepage</a></li>
+                        <li class="list"><a href="../../roadmap.html">Roadmap</a></li>
+                        <li class="list"><a href="../../about.html">About Me</a></li>
+                        <li class="list"><a href="../../work.html"> My Work &amp; <i class="fa fa-github"
+                              aria-hidden="true"></i> </a></li>
+                        <li class="list"><a href="../../tutorial.html">Tutorial</a></li>
+                        <li class="list"><a href="../../videos.html">Videos</a></li>
+                        <li class="list"><a href="../../contact.html">Contact Me</a></li>
+                      </ul>
+                    </p>
+                  </div>
+
+                  <div class="col-md-3 col-sm-3">
+                    <p>
+                      <span>External Links</span>
+                      <ul>
+                        <li class="list"><a href="../../donate.html">Donate <i class="fa fa-usd" aria-hidden="true"></i>
+                            Support</a></li>
+                        <li class="list"><a href="../../coming-soon.html">My <i class="fa fa-code"></i>My Resume</a>
+                        </li>
+                        <li class="list"><a href="../../coming-soon.html">Salesforce<i class="fa fa-cloud"></i>Blog</a>
+                        </li>
+                        <li class="list"><a href="../../coming-soon.html">YT<i class="fa fa-youtube-play"
+                              aria-hidden="true"></i> #Swarnil </a></li>
+                        <li class="list"><a href="../../coming-soon.html"><i class="fa fa-hashtag"
+                              aria-hidden="true"></i>My All Websites </a></li>
+                      </ul>
+
+                    </p>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6">
+                    <p>
+                      <span class="main-color">Imswarnil</span>
+                      <ul>
+                        <li>A Trailblazer from India, A Middle Class Family Boy Chasing His Dream, By Learning, By
+                          Creating Content,
+                          By Writing Blog, By Helping Other In Short I want to become the perfect example of
+                          "TRAILBLAZER".
+                          <span class="main-color"><a href="../../about.html">Know More About Me</a></span> </li>
+                        <li>
+                          <p>Email Us :<a href="mailto:swarnil@imswarnil.com"> swarnil@imswarnil.com</a></p>
+                        </li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="text-center">
+                <div class="social-icon padding-0">
+                  <li><a href="https://www.facebook.com/swarnil.singhai" target="_blank" class="facebook"><i
+                        class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/hashtag_swarnil" target="_blank" class="twitter"><i
+                        class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/swarnil-singhai-b89224104/" target="_blank"
+                      class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCRkqSGyfZkhOzZIHjlgBXcQ?view_as=subscriber"
+                      target="_blank" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="https://github.com/imswarnil" target="_blank" class="github"><i
+                        class="fa fa-github"></i></a></li>
+                </div>
+              </div>
+              <div class="swarnil-credit">Design By <a href="https://www.instagram.com/hashtag_swarnil/"
+                  target="_blank">Swarnil</a> & Made With Love, Music, And Tea</div>
+
+              <p>© Copyright 2018 Swarnil. All rights reserved</p>
+              <!-- Swarnil Credit Start -->
+              <a target="_black" href="../../terms.html">Terms of Service</a> | <a target="_blank"
+                href="../../privacy.html">Privacy</a>
+              <!-- Swarnil Credit End -->
+            </footer>
+          </div>
+          <!-- Footer End -->
+
+
+        </div>
+        <!-- Blog Post (Right Sidebar) End -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Endpage Box (Popup When Scroll Down) Start -->
+  <div id="scroll-down-popup" class="endpage-box">
+    <div class="center">
+      <h4><a href="../../dontate.html">Donate & Support Me</a></h4>
+      <p>If you love my work & want to appreciate or contribute </p>
+      <button class="btn green white-text" id="donate"> <i class="fa fa-inr" aria-hidden="true"></i>
+        Donate Now
+      </button>
+    </div>
+  </div>
+  <!-- Endpage Box (Popup When Scroll Down) End -->
+
+  <!-- Back to Top Start -->
+  <a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+  <!-- Back to Top End -->
+
+
+  <!-- All Javascript Plugins  -->
+  <script type="text/javascript" src="../../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/plugin.js"></script>
+  <!-- Main Javascript File  -->
+  <script type="text/javascript" src="../../js/scripts.js"></script>
+
+  <script src="../../js/OneSignalSDKUpdaterWorker.js" type="text/javascript"></script>
+  <script src="../../js/OneSignalSDKWorker.js" type="text/"></script>
+  <!-- Syntax Highlighter Javascript File  -->
+  <script type="text/javascript" src="../../js/syntax/shCore.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushCss.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushJScript.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushPerl.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushPhp.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushPlain.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushPython.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushRuby.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushSql.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushVb.js"></script>
+  <script type="text/javascript" src="../../js/syntax/shBrushXml.js"></script>
+
+  <!-- Syntax Highlighter Call Function -->
+  <script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '../../js/syntax/clipboard.swf';
+    SyntaxHighlighter.all();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+
+</html>
